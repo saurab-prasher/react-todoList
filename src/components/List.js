@@ -14,6 +14,7 @@ const List = ({ list, setList }) => {
           <li key={i} className="list-none bg-white p-2 rounded-md my-2 w-60 ">
             {el}
           </li>
+
           <button
             type="button"
             className=" ml-1 bg-red-600 px-1.5 py-1.5 text-white rounded-md focus:outline-none"
