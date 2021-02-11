@@ -6,7 +6,7 @@ const List = ({ listValue, setList }) => {
   const [isEditing, setEditing] = useState(false);
 
   return (
-    <div className=" mt-5 p-6 bg-indigo-300 max-w-sm mx-auto shadow-sm rounded-xl ">
+    <div className=" mt-5 p-6 bg-indigo-300 max-w-sm mx-auto shadow-sm rounded-xl  ">
       <div>
         {isEditing ? (
           <EditingTemplate

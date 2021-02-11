@@ -17,10 +17,10 @@ const EditingTemplate = ({ listValue, isEditing, setEditing }) => {
   };
 
   return (
-    <form className="flex">
+    <form className="flex my-2">
       <div className="form-group">
         <input
-          className="focus:outline-none focus:ring focus:border-blue-50 rounded-md  p-1.5 shadow-sm  placeholder-gray-500"
+          className="focus:outline-none focus:ring focus:border-blue-50 rounded-md  p-2 shadow-sm  placeholder-gray-500"
           type="text"
           id="name"
           onChange={(e) => onValueChange(e)}
