@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Button from "./Button";
-import List from "./List";
+import ViewTemplate from "./ViewTemplate";
 import SearchBar from "./SearchBar";
 
 const App = () => {
   const [term, setTerm] = useState("");
   const [list, setList] = useState([]);
+  const [isEditing, setEditing] = useState(false);
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +27,12 @@ const App = () => {
         <Button />
       </form>
 
-      <List list={list} setList={setList} />
+      <ViewTemplate
+        isEditing={isEditing}
+        setEditing={setEditing}
+        list={list}
+        setList={setList}
+      />
     </>
   );
 };
