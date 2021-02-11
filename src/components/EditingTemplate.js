@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const EditingTemplate = ({ listValue, isEditing, setEditing }) => {
+  console.log(listValue);
   const [value, setValue] = useState(listValue);
   const onCancelClick = () => {
     setEditing(false);
-    console.log("Cancelled button clicked");
   };
 
   const onValueChange = (e) => {

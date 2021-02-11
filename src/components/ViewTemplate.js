@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import EditingTemplate from "./EditingTemplate";
 
-const List = ({ list, setList, isEditing, setEditing }) => {
+const ViewTemplate = ({ listValue, setList, isEditing, setEditing }) => {
   const onDeleteClick = (i) => {
-    const newList = list.filter((item) => item !== list[i]);
+    const newList = listValue.filter((item) => item !== listValue[i]);
     setList(newList);
   };
 
-  const onEditClick = (li) => {
-    console.log("edit button clicked:", li);
+  const onEditClick = (li, i) => {
+    console.log("edit button clicked:", li, i);
     setEditing(true);
   };
-
-  const viewTemplate = list.map((el, i) => {
+  const renderView = listValue.map((el, i) => {
     return (
       <ul className="flex items-center justify-between">
         <li key={i} className="list-none bg-white p-2 rounded-md my-2 w-60 ">
@@ -22,7 +20,7 @@ const List = ({ list, setList, isEditing, setEditing }) => {
         <button
           type="button"
           className=" ml-1 bg-yellow-400 px-1.5 py-1.5 text-gray-600 text-white rounded-md focus:outline-none "
-          onClick={() => onEditClick(el)}
+          onClick={() => onEditClick(el, i)}
         >
           edit
         </button>
@@ -37,21 +35,7 @@ const List = ({ list, setList, isEditing, setEditing }) => {
     );
   });
 
-  return (
-    <div className=" mt-5 p-6 bg-indigo-300 max-w-sm mx-auto shadow-sm rounded-xl ">
-      <div>
-        {isEditing ? (
-          <EditingTemplate
-            listValue={list}
-            isEditing={isEditing}
-            setEditing={setEditing}
-          />
-        ) : (
-          viewTemplate
-        )}
-      </div>
-    </div>
-  );
+  return <>{renderView}</>;
 };
 
-export default List;
+export default ViewTemplate;

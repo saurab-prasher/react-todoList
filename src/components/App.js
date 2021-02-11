@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Button from "./Button";
-import ViewTemplate from "./ViewTemplate";
+import List from "./List";
+
 import SearchBar from "./SearchBar";
 
 const App = () => {
   const [term, setTerm] = useState("");
   const [list, setList] = useState([]);
-  const [isEditing, setEditing] = useState(false);
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -26,13 +26,7 @@ const App = () => {
         <SearchBar term={term} setTerm={setTerm} />
         <Button />
       </form>
-
-      <ViewTemplate
-        isEditing={isEditing}
-        setEditing={setEditing}
-        list={list}
-        setList={setList}
-      />
+      <List listValue={list} setList={setList} />
     </>
   );
 };
