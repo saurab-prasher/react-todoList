@@ -35,7 +35,7 @@ const App = (props) => {
   ));
 
   return (
-    <>
+    <div className="md:container mx-auto ">
       {/* Header */}
       <Header />
       {/* Add the task InputBar */}
@@ -46,7 +46,7 @@ const App = (props) => {
         <ul className="list-none">{taskList}</ul>
         {/* Edit Template */}
       </div>
-    </>
+    </div>
   );
 };
 
