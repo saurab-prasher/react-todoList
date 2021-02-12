@@ -1,9 +1,11 @@
 import React from "react";
 
-const Todo = ({ name }) => {
+const Todo = ({ name, deleteTask, id }) => {
   return (
     <div className="flex items-center">
-      <li className="bg-white w-max p-2 rounded-md my-2 ">{name}</li>
+      <li id={id} className="bg-white w-max p-2 rounded-md my-2 ">
+        {name}
+      </li>
       <div className="btn-group">
         <button
           type="button"
@@ -14,6 +16,7 @@ const Todo = ({ name }) => {
         <button
           type="button"
           className="ml-1 bg-red-600 px-1.5 py-1.5 text-white rounded-md focus:outline-none"
+          onClick={() => deleteTask(id)}
         >
           Delete
         </button>
