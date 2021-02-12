@@ -41,11 +41,11 @@ const App = (props) => {
       {/* Add the task InputBar */}
       <InputBar onSubmit={addTask} />
 
-      {/* View Template */}
-      <div className=" mt-5 p-6 bg-indigo-300 max-w-xl mx-auto shadow-sm rounded-xl  ">
-        <ul className="list-none">{taskList}</ul>
-        {/* Edit Template */}
-      </div>
+      {tasks.length !== 0 ? (
+        <div className=" mt-5 p-6 bg-indigo-300 max-w-xl mx-auto shadow-sm rounded-xl  ">
+          <ul className="list-none">{taskList}</ul>
+        </div>
+      ) : null}
     </div>
   );
 };
