@@ -6,7 +6,10 @@ module.exports = {
       colors: {
         purp: "#292929",
       },
-      spacing: {},
+      spacing: {
+        //prettier-ignore
+        "95": '23rem',
+      },
     },
   },
   variants: {

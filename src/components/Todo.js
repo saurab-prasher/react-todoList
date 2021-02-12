@@ -41,7 +41,7 @@ const Todo = ({ name, deleteTask, id, editTask }) => {
     >
       <>
         <input
-          className="rounded-md p-2 shadow-sm placeholder-gray-500 w-96"
+          className="rounded-md p-2 shadow-sm placeholder-gray-500 w-95"
           type="text"
           id="name"
           placeholder={name}
